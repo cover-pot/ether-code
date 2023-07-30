@@ -4,10 +4,29 @@ pragma solidity ^0.8.0;
 contract Types {
 
     enum Weekday {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}
+    
+    // value type struct
+    struct ValueType {
+        bool _bool;
 
+        int _int;
+        uint _uint;
+        uint128 _uint128;
+
+        address addr1;
+        address payable addr2;
+        uint256 _balance;
+
+        bytes16 _byte1;
+        bytes1 _byte2;
+
+        Weekday _weekDay;
+        uint _weekDayValue;
+
+    }
 
     // value type 
-    function valueType() public view {
+    function valueType() public view returns(ValueType memory vt){
         // 布尔类型
         bool _bool = false; 
 
@@ -28,5 +47,20 @@ contract Types {
         // 枚举类型
         Weekday sunday = Weekday.Sunday;
         uint numberDay = uint(sunday);
+
+        // init value
+
+        vt._bool = _bool;
+        vt._int = _int;
+        vt._uint = _uint;
+        vt._uint128 = _uint128;
+        vt.addr1 = addr1;
+        vt.addr2 = addr2;
+        vt._balance = _balance;
+        vt._byte1 = _bytes1;
+        vt._byte2 = _bytes2;
+        vt._weekDay = sunday;
+        vt._weekDayValue = numberDay;
+
     }
 }
