@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 contract Types {
 
-    enum Weekday {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
+    enum Weekday {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}
 
 
     // value type 
@@ -26,7 +26,7 @@ contract Types {
         bytes1 _bytes2 = _bytes1[0];
 
         // 枚举类型
-        WeekDay sunday = Weekday.Sunday;
+        Weekday sunday = Weekday.Sunday;
         uint numberDay = uint(sunday);
     }
 }
