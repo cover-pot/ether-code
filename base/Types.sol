@@ -63,4 +63,24 @@ contract Types {
         vt._weekDayValue = numberDay;
 
     }
+
+    // function type
+    function addPure() public pure returns(uint _number){
+        _number = 10;
+    }
+
+    uint number = 100;
+    function addView() public view returns(uint){
+        return number + 10;
+    }
+    
+    function addPublic(uint _number) public {
+        number += _number;
+    }
+
+
+    // return and returns
+    function returnMulti() public pure returns(uint, string memory, uint[3] memory){
+        return(uint(1), "test", [uint(1), 2, 3]);
+    }
 }
