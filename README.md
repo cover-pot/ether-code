@@ -46,4 +46,29 @@
 
 当定义函数时候，函数参数默认被定义为`calldata`类型，意味着在函数内部不能直接修改参数的值。
 
+## 继承- inheritance
+父合约中的函数要是想被子合约继承的话需要使用`virtual`修饰。
+
+eg:
+
+```
+
+function foo() public virtual returns(uint256){
+        return 1;
+    }
+
+```
+
+子合约想要重写父合约的函数需要加上`override`
+
+eg:
+
+```
+
+function foo() public virtual override returns(uint256){
+        return 2;
+    }
+
+```
+
 
