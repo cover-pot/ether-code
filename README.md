@@ -1,2 +1,4 @@
 # learn solidity
-`refer to` [wtf]{https://www.wtf.academy/}
+`refer to`
+[wtf](https://www.wtf.academy/)
+
